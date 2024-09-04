@@ -22,7 +22,7 @@ d. Observe record categorization columns (ie. InitialTypeText), drop null values
 
 ## 2. Data Transformation:
 
-a. Create a new categorization column for broader analysis of response time correlation using the InitialTypeText column.  
+a. Create a new categorization column for broader analysis of response time correlation using the InitialTypeText column.  Call it "Incident Category."
 
 b. Drop values of InitialTypeText with < 70 records and other incident type records that can be deemed irrelevant for the purposes of this project (ie. routine tests).
 
@@ -38,7 +38,7 @@ e. Create four new features that calculate response times in the format of hours
 2e.3 Time Arrive to Time Closed = TimeClosed - TimeArrive  
 2e.4 Time Create to Arrival Time = TimeArrive - TimeCreate   
 
-f. Tranform these date/time difference results to units of hours.  
+f. Transform these date/time difference results to units of hours.  
 
 * [Data Cleaning and EDA Notebook](2023CrimeData_DataCleaning_and_EDA.ipynb)  
   
