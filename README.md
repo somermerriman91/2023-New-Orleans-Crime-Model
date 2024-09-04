@@ -1,4 +1,4 @@
-### Project Overview
+# Project Overview
 This project aims to analyze and predict response times for incident calls reported to the Orleans Parish Communication District (OPCD) in 2023. The dataset, downloaded from Data.gov, contains 325,091 records and was cleaned by adding geospatial columns, handling missing values, and calculating new response time metrics. Trend and geospatial analyses can be used to identify patterns and hotspots, aiding resource planning. Feature engineering involved encoding categorical variables and transforming data for predictive modeling. A Gradient Boosting model was developed to predict response times to be flagged as either a "high risk" or "low risk" case based on incident category, zip code, police district, geolocation, and other incident details.
 
 Future implications for this project include developing an app for visualizing trends and serving response time predictions, leveraging technologies like Flask, React, and AWS. The app will enhance public safety by optimizing resource allocation and improving decision-making for the New Orleans Police Department (NOPD).
@@ -11,7 +11,7 @@ Loaded into Jupyter as "Calls_for_Service_2023.csv"
 81.4 MB CSV File
 Shape: 325,091 rows, 21 columns
 
-### 1. Data Cleaning: 
+## 1. Data Cleaning: 
 
 a. Import necessary libraries.
 b. Load dataset into notebook using pandas.
@@ -20,7 +20,7 @@ d. Observe record categorization columns (ie. InitialTypeText), drop null values
 
 
 
-### 2. Data Transformation:
+## 2. Data Transformation:
 
 a. Create a new categorization column for broader analysis of response time correlation using the InitialTypeText column.
 b. Drop values of InitialTypeText with < 70 records and other incident type records that can be deemed irrelevant for the purposes of this project (ie. routine tests).
@@ -35,10 +35,10 @@ e. Create four new features that calculate response times in the format of hours
 2e.4 Time Create to Arrival Time = TimeArrive - TimeCreate
 f. Tranform these date/time difference results to units of hours.
 
+  
+  
 
-
-
-### 3. Exploratory Analysis:
+## 3. Exploratory Analysis:
 
 
 **Class Distribution**: Observe class distribution by Incident Category, Zip Code, Police District, Disposition Text to observe geospatial distributions and ensure relatively balanced class distributions, as they affect model performance. 
@@ -46,10 +46,10 @@ f. Tranform these date/time difference results to units of hours.
 
 ![Alt text](Crime.EDA.png)
 
+  
+  
 
-
-
-### 4. Feature Engineering: 
+## 4. Feature Engineering: 
 
 **Final Target Variable**: Call to Dispatch Time - binary - above or below median response time (above median response time flagged as potential high wait time scenario). Define threshold for classification of target variable between low risk of above median dispatch time and high risk of being above median dispatch time.
 
@@ -85,10 +85,10 @@ While still outside of the major US city average response time range, this thres
 
 #### 4c. Apply one-hot encoding transformations to categorical features (this will be done in a pipeline).
 
+  
+  
 
-
-
-### 5. Pipelines, Models, and Hyperparameter Tuning:
+## 5. Pipelines, Models, and Hyperparameter Tuning:
  
 **Response Time Prediction**: Develop a model to predict a binary outcome - a call that will be flagged as "high risk" for above threshold expected wait time, or "low risk" for below threshold expected wait time.
 
@@ -142,11 +142,11 @@ GBCs are generally robust to noisy data and outliers. This dataset, even after c
 
 #### 5d. **Fine-tune hyperparameters using techniques using RandomizedSearch (to save computing power) within Colab.**
 
+  
 
+  
 
-
-
-### 6. Assessing model performance:  
+## 6. Assessing model performance:  
 
 
 **6a.1 Decision Tree Classification Report**  
