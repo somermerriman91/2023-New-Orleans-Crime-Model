@@ -142,23 +142,19 @@ GBCs are generally robust to noisy data and outliers. This dataset, even after c
 **6a.1 Decision Tree Classification Report**  
   
 ![Alt text](dtreport.png)  
-
 Since the default Decision Tree model's performance scores paled in comparison to Random Forest and Gradient Boost, hyperparameter tuning was not conducted.
 
 **6a.2 Random Forest Classification Report**  
 
 ![Alt text](rfreport.png)
-
 Hyperparameter tuning was conducted using Randomized Search and a "best model" was run with resulting hyperparamer arguments. However, this did impact Precision, Recall, and F1 scores at an impactful level when compared to the baseline model.  
 
 **6a.3 Gradient Boosting Classification Report**  
   
 ![Alt text](gborigreport.png) 
-
 Original classification report scores.  
 
  ![Alt text](gbreport.png) 
-
 Upon hyperparameter tuning the Gradient Boosting model, there was a significant increase in Precision, Recall, and F1 scores.  
 
 **Precision for High Risk**: 0.92.   
