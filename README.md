@@ -89,10 +89,11 @@ While still outside of the major US city average response time range, this thres
 
 #### 4b. Define a function to create a binary feature that labels instances as either "high risk," as in high wait time expected ( > 21.30 minutes), or "low risk," as in low/acceptable wait times expected.
 
-#### 4c. Apply one-hot encoding transformations to categorical features (this will be done in a pipeline).
+#### 4c. Apply one-hot encoding transformations to categorical features (this will be done in a pipeline).  
 
   
-  
+
+    
 
 ## 5. Pipelines, Models, and Hyperparameter Tuning:
  
