@@ -41,7 +41,7 @@ f. Tranform these date/time difference results to units of hours.
 ## 3. Exploratory Analysis:
 
 
-**Class Distribution**: Observe class distribution by Incident Category, Zip Code, Police District, Disposition Text to observe geospatial distributions and ensure relatively balanced class distributions, as they affect model performance. 
+*Class Distribution*: Observe class distribution by Incident Category, Zip Code, Police District, Disposition Text to observe geospatial distributions and ensure relatively balanced class distributions, as they affect model performance. 
 **Response Time Analysis**: Evaluate the response times (InitialCalltoDispatchTime, DispatchToArriveTime, ArrivaltoClose, ActualResponseTime) to identify areas or times where response times are higher than average and investigate potential causes. 
 
 ![Alt text](Crime.EDA.png)
@@ -96,7 +96,7 @@ While still outside of the major US city average response time range, this thres
 #### Approach:
 
 
-#### 5a. **Splitting the data.**
+#### 5a. Splitting the data.
 Split data into train and test sets.
 
 #### 5b. **Train multiple models and evaluate their performance using appropriate metrics (e.g., Precision, Recall, F1)**
