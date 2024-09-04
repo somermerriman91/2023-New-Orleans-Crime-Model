@@ -57,18 +57,18 @@ Here, we are going to use median instead of mean, as the heavy presence of outli
 
 For reference, here are other major cities' mean 911 response times for 2023:
 
-Chicago: 3.46 minutes
-Los Angeles: 5.7 minutes
-Seattle: 7 minutes
-Dallas: 8 minutes
-Miami: 8 minutes
-New York City: 9.1 minutes
-Atlanta: 9.5 minutes
-Houston: 10 minutes
-Detroit: 12 minutes
-Denver: 13 minutes
+Chicago: 3.46 minutes  
+Los Angeles: 5.7 minutes  
+Seattle: 7 minutes  
+Dallas: 8 minutes  
+Miami: 8 minutes  
+New York City: 9.1 minutes  
+Atlanta: 9.5 minutes  
+Houston: 10 minutes  
+Detroit: 12 minutes  
+Denver: 13 minutes  
 
-New Orleans: 
+**New Orleans:** 
 
 #### 4a. Calculate point statistics and choose a threshold value for flagging high expected wait times.
 
