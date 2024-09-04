@@ -52,10 +52,13 @@ f. Tranform these date/time difference results to units of hours.
 
 ![Alt text](Crime.EDA.png)
 
-  
-* [Preprocessing and Modeling Notebook](Copy_of_2023CrimeData_Preprocessing_Modeling.ipynb)    
 
-## 4. Feature Engineering: 
+  
+
+## 4. Feature Engineering:   
+
+  
+* [Preprocessing and Modeling Notebook](Copy_of_2023CrimeData_Preprocessing_Modeling.ipynb)  
 
 **Final Target Variable**: Call to Dispatch Time - binary - above or below median response time (above median response time flagged as potential high wait time scenario). Define threshold for classification of target variable between low risk of above median dispatch time and high risk of being above median dispatch time.
 
