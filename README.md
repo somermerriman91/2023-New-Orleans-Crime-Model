@@ -18,6 +18,8 @@ b. Load dataset into notebook using pandas.
 c. Create Latitude/Longitude columns from 'Location' column using replace(), strip(), split().
 d. Observe record categorization columns (ie. InitialTypeText), drop null values.
 
+
+
 ### 2. Data Transformation:
 
 a. Create a new categorization column for broader analysis of response time correlation using the InitialTypeText column.
@@ -34,6 +36,8 @@ e. Create four new features that calculate response times in the format of hours
 f. Tranform these date/time difference results to units of hours.
 
 
+
+
 ### 3. Exploratory Analysis:
 
 
@@ -41,6 +45,8 @@ f. Tranform these date/time difference results to units of hours.
 **Response Time Analysis**: Evaluate the response times (InitialCalltoDispatchTime, DispatchToArriveTime, ArrivaltoClose, ActualResponseTime) to identify areas or times where response times are higher than average and investigate potential causes. 
 
 ![Alt text](Crime.EDA.png)
+
+
 
 
 ### 4. Feature Engineering: 
@@ -78,6 +84,8 @@ While still outside of the major US city average response time range, this thres
 #### 4b. Define a function to create a binary feature that labels instances as either "high risk," as in high wait time expected ( > 21.30 minutes), or "low risk," as in low/acceptable wait times expected.
 
 #### 4c. Apply one-hot encoding transformations to categorical features (this will be done in a pipeline).
+
+
 
 
 ### 5. Pipelines, Models, and Hyperparameter Tuning:
@@ -133,6 +141,8 @@ GBCs are generally robust to noisy data and outliers. This dataset, even after c
 #### 5c. **Use cross-validation for each model to assess how each generalizes to unseen data.**
 
 #### 5d. **Fine-tune hyperparameters using techniques using RandomizedSearch (to save computing power) within Colab.**
+
+
 
 
 
