@@ -40,7 +40,7 @@ f. Tranform these date/time difference results to units of hours.
 **Class Distribution**: Observe class distribution by Incident Category, Zip Code, Police District, Disposition Text to observe geospatial distributions and ensure relatively balanced class distributions, as they affect model performance. 
 **Response Time Analysis**: Evaluate the response times (InitialCalltoDispatchTime, DispatchToArriveTime, ArrivaltoClose, ActualResponseTime) to identify areas or times where response times are higher than average and investigate potential causes. 
 
-![Alt text](2023-New-Orleans-Crime-Model/Crime.EDA.png)
+![Alt text](Crime.EDA.png)
 
 
 ### 4. Feature Engineering: 
@@ -141,23 +141,23 @@ GBCs are generally robust to noisy data and outliers. This dataset, even after c
 
 **6a.1 Decision Tree Classification Report**  
   
-![Alt text](2023-New-Orleans-Crime-Model/dtreport.png)  
+![Alt text](dtreport.png)  
 
 Since the default Decision Tree model's performance scores paled in comparison to Random Forest and Gradient Boost, hyperparameter tuning was not conducted.
 
 **6a.2 Random Forest Classification Report**  
 
-![Alt text](2023-New-Orleans-Crime-Model/rfreport.png)
+![Alt text](rfreport.png)
 
 Hyperparameter tuning was conducted using Randomized Search and a "best model" was run with resulting hyperparamer arguments. However, this did impact Precision, Recall, and F1 scores at an impactful level when compared to the baseline model.  
 
 **6a.3 Gradient Boosting Classification Report**  
   
-![Alt text](2023-New-Orleans-Crime-Model/gborigreport.png) 
+![Alt text](gborigreport.png) 
 
 Original classification report scores.  
 
- ![Alt text](2023-New-Orleans-Crime-Model/gbreport.png) 
+ ![Alt text](gbreport.png) 
 
 Upon hyperparameter tuning the Gradient Boosting model, there was a significant increase in Precision, Recall, and F1 scores.  
 
