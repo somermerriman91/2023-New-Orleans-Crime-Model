@@ -105,14 +105,15 @@ Split data into train and test sets.
 
 Why a Decision Tree Classifier Might Be Well-Suited:
 
-Simplicity and Interpretability:
+*Simplicity and Interpretability:*
 Decision trees are straightforward and easy to interpret. Each decision node represents a feature and a decision rule that splits the data. For this dataset, which includes categorical and numerical features like Priority, Type, and TimeCreate_hour, a decision tree can capture the decision-making process that leads to a "high risk" or "low risk" dispatch time classification. Handling Mixed Data Types:
 
-Can handle both categorical (Type, Beat, Zip) and numerical (TimeCreate_hour, InitialPriority) features: This makes them particularly suited for datasets with a variety of data types.  
+*Can handle both categorical (Type, Beat, Zip) and numerical (TimeCreate_hour, InitialPriority) features:* This makes them particularly suited for datasets with a variety of data types.  
 
 No Need for Feature Scaling:  
 Decision trees do not require feature scaling, which simplifies preprocessing. This is advantageous when dealing with features like time attributes (TimeCreate_hour, TimeDispatch_day), where scaling might not intuitively improve model performance.
 
+  
 #### 5b.2 Random Forest Classifier
 
 Why a Random Forest Classifier Might Be Well-Suited:
@@ -120,27 +121,28 @@ Why a Random Forest Classifier Might Be Well-Suited:
 Ensemble Learning for Robust Predictions:
 A random forest is an ensemble of multiple decision trees, which are trained on different subsets of the data and features. This reduces the variance of the predictions, leading to more robust and accurate classifications compared to a single decision tree.
 
-Handling Overfitting:
+*Handling Overfitting:*
 Random forests are less prone to overfitting than decision trees because they average the predictions from multiple trees. This is especially useful in a dataset like this, where certain features (e.g., InitialTypeText, DispositionText) might cause a single tree to overfit. Feature Importance:
 
-Feature Importance: This can help identify the most critical factors influencing whether a dispatch time is classified as "high risk" or "low risk." Handling Missing Data and Noise:
+*Feature Importance:* This can help identify the most critical factors influencing whether a dispatch time is classified as "high risk" or "low risk." Handling Missing Data and Noise:
 
-Robust to Noise, Missing Data, and Outliers:
+*Robust to Noise, Missing Data, and Outliers:*
 Random forests can handle missing data relatively well by averaging across the trees. They are also robust to noise, as individual noisy trees will have less influence on the final prediction.
 
 #### 5b.2 Gradient Boosting Classifier
-
+  
+  
 Why GBC Might Be Well-Suited:
+  
+*Handling Complex Relationships:*
+GBCs can effectively capture complex, non-linear relationships between features and the target variable. This is important because 911 call data often involves factors that might not have a simple linear impact on dispatch time category (e.g., type of incident, location, time of day).  
+  
+*Robust to Noise and Outliers:*  
+GBCs are generally robust to noisy data and outliers. This dataset, even after cleaning, has potential for data entry errors. It has also been confirmed to contain outliers as seen in the data cleaning notebook.  
 
-Handling Complex Relationships:
-GBCs can effectively capture complex, non-linear relationships between features and the target variable. This is important because 911 call data often involves factors that might not have a simple linear impact on dispatch time category (e.g., type of incident, location, time of day).
+### 5c. **Use cross-validation for each model to assess how each generalizes to unseen data.**  
 
-Robust to Noise and Outliers:
-GBCs are generally robust to noisy data and outliers. This dataset, even after cleaning, has potential for data entry errors. It has also been confirmed to contain outliers as seen in the data cleaning notebook.
-
-### 5c. **Use cross-validation for each model to assess how each generalizes to unseen data.**
-
-### 5d. **Fine-tune hyperparameters using techniques using RandomizedSearch (to save computing power) within Colab.**
+### 5d. **Fine-tune hyperparameters using techniques using RandomizedSearch (to save computing power) within Colab.**  
 
   
 
