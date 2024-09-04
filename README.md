@@ -23,16 +23,21 @@ d. Observe record categorization columns (ie. InitialTypeText), drop null values
 ## 2. Data Transformation:
 
 a. Create a new categorization column for broader analysis of response time correlation using the InitialTypeText column.  
-b. Drop values of InitialTypeText with < 70 records and other incident type records that can be deemed irrelevant for the purposes of this project (ie. routine tests).  
+
+b. Drop values of InitialTypeText with < 70 records and other incident type records that can be deemed irrelevant for the purposes of this project (ie. routine tests).
+
 c. Observe class distributions of InitialTypeText, Zip Code, Disposition Text, and Police District.  
+
 d. Data Type Checkpoint - convert columns to appropriate data types keeping feature engineering in mind.  
 2d.1 Convert Police District to an object, as it defines a categorical region, and is not used as an integer.  
-2d.2 Drop records where Lat/Long did not convert from the original "Location" column properly.  
+2d.2 Drop records where Lat/Long did not convert from the original "Location" column properly.   
+  
 e. Create four new features that calculate response times in the format of hours (float).  
 2e.1 Dispatch Response Time = TimeDispatch - TimeCreate  
 2e.2 Scene Arrival Response Time = TimeArrive - TimeDispatch   
 2e.3 Time Arrive to Time Closed = TimeClosed - TimeArrive  
-2e.4 Time Create to Arrival Time = TimeArrive - TimeCreate  
+2e.4 Time Create to Arrival Time = TimeArrive - TimeCreate   
+
 f. Tranform these date/time difference results to units of hours.  
 
   
