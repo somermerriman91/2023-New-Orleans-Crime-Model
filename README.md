@@ -40,7 +40,7 @@ e. Create four new features that calculate response times in the format of hours
 
 f. Tranform these date/time difference results to units of hours.  
 
-  
+* [Data Cleaning and EDA Notebook](2023CrimeData_DataCleaning_and_EDA.ipynb)  
   
 
 ## 3. Exploratory Analysis:
@@ -53,7 +53,7 @@ f. Tranform these date/time difference results to units of hours.
 ![Alt text](Crime.EDA.png)
 
   
-  
+* [Preprocessing and Modeling Notebook](Copy_of_2023CrimeData_Preprocessing_Modeling.ipynb)    
 
 ## 4. Feature Engineering: 
 
@@ -185,7 +185,6 @@ This shows that 88% of the actual high-risk calls are correctly identified. A hi
 
 **Precision and Recall for Low Risk**:  
 The precision and recall are balanced here as well (0.89 precision, 0.93 recall). This balance ensures that low-risk calls are correctly identified, reducing the chances of underestimating the risk of a call that might actually be urgent.  
-
 
 
 
