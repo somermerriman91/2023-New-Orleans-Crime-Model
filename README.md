@@ -93,15 +93,15 @@ While still outside of the major US city average response time range, this thres
 **Response Time Prediction**: Develop a model to predict a binary outcome - a call that will be flagged as "high risk" for above threshold expected wait time, or "low risk" for below threshold expected wait time.
 
 
-#### Approach:
+### Approach:
 
 
-#### 5a. Splitting the data.
+### 5a. Splitting the data.
 Split data into train and test sets.
 
-#### 5b. **Train multiple models and evaluate their performance using appropriate metrics (e.g., Precision, Recall, F1)**
+### 5b. **Train multiple models and evaluate their performance using appropriate metrics (e.g., Precision, Recall, F1)**
 
-**5b.1 Decision Tree Classifier**
+#### 5b.1 Decision Tree Classifier
 
 Why a Decision Tree Classifier Might Be Well-Suited:
 
@@ -113,7 +113,7 @@ Can handle both categorical (Type, Beat, Zip) and numerical (TimeCreate_hour, In
 No Need for Feature Scaling:  
 Decision trees do not require feature scaling, which simplifies preprocessing. This is advantageous when dealing with features like time attributes (TimeCreate_hour, TimeDispatch_day), where scaling might not intuitively improve model performance.
 
-**5b.2 Random Forest Classifier**
+#### 5b.2 Random Forest Classifier
 
 Why a Random Forest Classifier Might Be Well-Suited:
 
@@ -128,7 +128,7 @@ Feature Importance: This can help identify the most critical factors influencing
 Robust to Noise, Missing Data, and Outliers:
 Random forests can handle missing data relatively well by averaging across the trees. They are also robust to noise, as individual noisy trees will have less influence on the final prediction.
 
-**5b.2 Gradient Boosting Classifier**
+#### 5b.2 Gradient Boosting Classifier
 
 Why GBC Might Be Well-Suited:
 
@@ -138,9 +138,9 @@ GBCs can effectively capture complex, non-linear relationships between features 
 Robust to Noise and Outliers:
 GBCs are generally robust to noisy data and outliers. This dataset, even after cleaning, has potential for data entry errors. It has also been confirmed to contain outliers as seen in the data cleaning notebook.
 
-#### 5c. **Use cross-validation for each model to assess how each generalizes to unseen data.**
+### 5c. **Use cross-validation for each model to assess how each generalizes to unseen data.**
 
-#### 5d. **Fine-tune hyperparameters using techniques using RandomizedSearch (to save computing power) within Colab.**
+### 5d. **Fine-tune hyperparameters using techniques using RandomizedSearch (to save computing power) within Colab.**
 
   
 
