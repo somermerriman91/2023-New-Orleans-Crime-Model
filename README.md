@@ -118,7 +118,7 @@ Decision trees do not require feature scaling, which simplifies preprocessing. T
 
 Why a Random Forest Classifier Might Be Well-Suited:
 
-Ensemble Learning for Robust Predictions:
+*Ensemble Learning for Robust Predictions:*
 A random forest is an ensemble of multiple decision trees, which are trained on different subsets of the data and features. This reduces the variance of the predictions, leading to more robust and accurate classifications compared to a single decision tree.
 
 *Handling Overfitting:*
